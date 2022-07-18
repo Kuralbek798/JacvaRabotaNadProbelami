@@ -1,5 +1,6 @@
 package zadachki;
 
+import java.util.ArrayList;
 import java.util.List;
 /*Создать класс User, содержащий private переменные login, password.
 Создать внутренний класс Query в классе User. Класс Query содержит метод printToLog(),
@@ -11,9 +12,12 @@ import java.util.List;
 
 public class User {
     private  String login;
-    private  List<Character> password;
+    private String password;
 
-    public User() {
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+
     }
 
     public String getLogin() {
@@ -24,11 +28,11 @@ public class User {
         this.login = login;
     }
 
-    public List<Character> getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(List<Character> password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -41,7 +45,7 @@ public class User {
 
     public  class Query{
         public void printToLog(){
-            System.out.println("The User with that password: " + password + " and " + login );
+            System.out.println("The User with that password: " + password + " and login: " + login );
         }
     }
 }
@@ -49,10 +53,10 @@ public class User {
 class Test{
     public static void main(String[] args) {
 
-        User user = new User();
+        User user = new User("Bob", "qwerty");
         user.createQuery();
         user.new Query().printToLog();
-        User.Query query = new User().new Query();
+        User.Query query = new User("Adam","rewq").new Query();
         query.printToLog();
     }
 
