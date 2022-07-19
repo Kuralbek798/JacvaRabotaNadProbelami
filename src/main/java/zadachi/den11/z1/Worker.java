@@ -1,4 +1,4 @@
-package zadachi.den10.z1;
+package zadachi.den11.z1;
 
 public interface Worker {
 
