@@ -37,12 +37,12 @@ public Girl(String name, int age, List<Doll> dolls ){
 }
 
 class Test{
-    public static void main(String[] args) {
-       /* List<Doll> dollList = new ArrayList<>();
+  /*  public static void main(String[] args) {
+        List<Doll> dollList = new ArrayList<>();
         dollList.add(new Doll("Barbie", "Mattel"));
         dollList.add(new Doll("Princess", "Hasbro"));
 
         Girl girl = new Girl("Suzi",35,dollList);
-*/
-    }
+
+    }*/
 }
