@@ -1,8 +1,6 @@
 package zadachi.den12.girl_with_dolls;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Girl {
 private String name;
@@ -16,7 +14,7 @@ private List<Doll> dolls = new ArrayList<>();
 public Girl(String name, int age, List<Doll> dolls ){
     this.name = name;
     this.age = age;
-    this.dolls = dolls;
+    this.dolls =  new ArrayList<>(dolls);
 }
 
 
@@ -47,7 +45,7 @@ public Girl(String name, int age, List<Doll> dolls ){
 
 class Test{
    public static void main(String[] args) {
-        List<Doll> dollList = new ArrayList<>();
+       // List<Doll> dollList = new ArrayList<>();
       /*   dollList.add(new Doll("Barbie", "Mattel"));
         dollList.add(new Doll("Princess", "Hasbro"));
 
@@ -55,9 +53,12 @@ class Test{
 
     }*/
 
-    Girl girl = new Girl ("Zhana",37, Arrays.asList(new Doll("Barbie", "Mattel"),
-            new Doll("Princess", "Hasbro")));
 
+       Girl girl = new Girl ("Zhana",37, Arrays.asList(new Doll("afaf", "fsdafaf"),
+               new Doll("erwe", "retrtew")));
+
+
+        girl.getDolls().remove(1);
 
 
        for (Doll doll : girl.getDolls())

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    //id "io.freefair.lombok" version "6.5.0.3"
 }
 
 group 'org.example'
@@ -7,17 +8,17 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+   /* maven {
+        url "https://plugins.gradle.org/m2/"
+    }*/
 }
 
 dependencies {
-    implementation 'org.jetbrains:annotations:20.1.0'
-    implementation 'org.jetbrains:annotations:20.1.0'
+   // classpath "io.freefair.gradle:lombok-plugin:6.5.0.3"
 
-    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation 'org.jetbrains:annotations:20.1.0'
     compileOnly 'org.projectlombok:lombok:1.18.24'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
 }
 
 test {
